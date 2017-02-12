@@ -14,7 +14,7 @@ class PinType(object):
 
 
 class PinBase(models.Model):
-    id = models.AutoField(primary_key=True, default=0)
+    id = models.AutoField(primary_key=True)
     pin_type = models.CharField(max_length=32, db_index=True, db_column="pin_type", default=PinType.PIN_TYPE_ARTICLE)
     title = models.CharField(max_length=256, db_index=True, db_column="title", default="")
     summary = models.CharField(max_length=1024, db_index=True, db_column="summary", blank=True, null=True)
