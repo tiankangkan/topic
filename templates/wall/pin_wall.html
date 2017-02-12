@@ -1,0 +1,99 @@
+{% load staticfiles %}
+
+{% include "foundation/layout.html" %}
+
+<link rel="stylesheet" type="text/css" href="{% static "wall/css/pin_wall.css" %}"/>
+
+
+<div id="grid-div" class="grid">
+    <!-- width of .grid-sizer used for columnWidth -->
+    <div class="grid-sizer"></div>
+</div>
+
+<div id="image-pin-template" class="grid-item" style="padding: 3px; display: none">
+    <div class="card">
+        <div class="card-image">
+            <a target="_blank"><img src="/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png"></a>
+            <a target="_blank"><span class="card-title">Card Title</span></a>
+            <a class="btn-floating halfway-fab waves-effect waves-light blue"><i
+                    class="material-icons">grade</i></a>
+        </div>
+        <div class="card-content">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                because I
+                require little markup to use effectively.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    var url_filter_pin = '../filterPin/';
+    var PIN_TYPE_IMAGE = 'PIN_TYPE_IMAGE';
+
+    function gen_image_pin(title, summary, link, image_url, width) {
+        var $card = $('#image-pin-template').clone();
+
+        if (width == undefined || !(width >= 1 && width <= 10)) {    // 不合法的 width
+            width = 1;
+        }
+
+        $card.attr('id', null).attr('display', 'inline-block');
+        $card.find('.card-title').text(title);
+        $card.find('.card-content p').text(summary);
+        $card.find('.card-image a').attr('href', link);
+        $card.find('.card-image a img').attr('src', image_url);
+        $card.addClass('grid-item--width' + width);
+        $card.show();
+
+        $('#grid-div').append($card);
+    }
+
+    function load_pins(pin_list) {
+        var $grid = $('#grid-div');
+        $grid.empty();
+        $grid.append('<div class="grid-sizer"></div>');
+        for (var i = 0; i < pin_list.length; i ++) {
+            var item = pin_list[i];
+            if (item.pin_type == PIN_TYPE_IMAGE) {
+                gen_image_pin(item.title, item.summary, item.link, item.image_url, item.width);
+            }
+        }
+
+        $grid.masonry({
+            // set itemSelector so .grid-sizer is not used in layout
+            itemSelector: '.grid-item',
+            // use element for option
+            columnWidth: '.grid-sizer',
+            percentPosition: true
+        });
+    }
+    
+    function filter_pins() {
+        show_loading('div_loading');
+        var values = {};
+        $.ajax({
+            url: url_filter_pin,
+            type: "POST",
+            dataType: 'json',
+            data: {'values': JSON.stringify(values)},
+            success: function (resp) {
+                console.log(resp);
+                hide_loading('div_loading');
+                if (resp.status == 'ok') {
+                    load_pins(resp.data);
+                } else {
+                    Materialize.toast(resp['data'], 10000);
+                }
+            }
+        });
+    }
+
+    $(function () {
+{#        for (var i = 0; i < 100;  i ++) {#}
+{#            gen_image_card('Pin', '这是一个新的 Pin', 'https://www.baidu.com/', '/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png', i % 4);#}
+{#        }#}
+        filter_pins();
+    });
+
+</script>
+

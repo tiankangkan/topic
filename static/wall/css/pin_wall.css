@@ -1,0 +1,45 @@
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+    width: 10%;
+}
+
+.grid-item--width1 {
+    width: 10%;
+}
+
+.grid-item--width2 {
+    width: 20%;
+}
+
+.grid-item--width3 {
+    width: 30%;
+}
+
+.grid-item--width4 {
+    width: 40%;
+}
+
+.grid-item--width5 {
+    width: 50%;
+}
+
+.grid-item--width6 {
+    width: 60%;
+}
+
+.grid-item--width7 {
+    width: 70%;
+}
+
+.grid-item--width8 {
+    width: 80%;
+}
+
+.grid-item--width9 {
+    width: 90%;
+}
+
+.grid-item--width10 {
+    width: 100%;
+}
