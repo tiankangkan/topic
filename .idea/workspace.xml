@@ -2,64 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfe894e-a0fa-4a7a-94de-b3b1e120566b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/masterkang.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_adapter/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_adapter/base_adapter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db_adapter/models_adapter.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/django_models_init.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/django_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/file_op.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/hash_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/json_util.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/kafkautil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/key_value_store.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/logutil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/multi_task.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/sysutil.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/time_op.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/kutil/timing_queen.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/admin.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/apps.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/migrations/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/models.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/tests.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/urls.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/me/views.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/items.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/middlewares.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/pipelines.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/settings.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/spiders/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/spiders/base_spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/spiders/km_ask_spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/pin_scrapy/spiders/tuicool_spider.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pin_scrapy/scrapy.cfg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/foundation/css/tag.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/LICENSE.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/bower.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/jquery.sticky.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/third-party/sticky/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/wall/js/global-define.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/me/me.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/wall/add_pin.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/js/bootstrap-switch.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/bootstrap/bootstrap-switch/dist/js/bootstrap-switch.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/masonry/dist/masonry.pkgd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/masonry/dist/masonry.pkgd.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/progressbar.js/dist/progressbar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/progressbar.js/dist/progressbar.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/progressbar.js/dist/progressbar.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/css/select2-bootstrap.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/css/select2-bootstrap.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/css/select2.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/css/select2.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/az.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/bg.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ca.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/cs.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/da.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/de.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/el.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/en.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/es.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/et.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/eu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/fa.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/fi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/fr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/gl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/he.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/hi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/hr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/hu.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/id.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/is.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/it.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ja.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/km.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ko.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/lt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/lv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/mk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ms.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/nb.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/nl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/pl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/pt-BR.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/pt.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ro.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/ru.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/sk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/sr-Cyrl.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/sr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/sv.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/th.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/tr.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/uk.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/vi.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/i18n/zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/select2.full.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/select2.full.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/select2.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/select2/dist/js/select2.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/sprintf/dist/angular-sprintf.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/sprintf/dist/angular-sprintf.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/sprintf/dist/sprintf.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/static/third-party/sprintf/dist/sprintf.min.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/wall/css/pin_wall.css" afterPath="$PROJECT_DIR$/static/wall/css/pin_wall.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/foundation/import_base_plugin.html" afterPath="$PROJECT_DIR$/templates/foundation/import_base_plugin.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/foundation/layout.html" afterPath="$PROJECT_DIR$/templates/foundation/layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/wall/pin_wall.html" afterPath="$PROJECT_DIR$/templates/wall/pin_wall.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topic/settings.py" afterPath="$PROJECT_DIR$/topic/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/topic/urls.py" afterPath="$PROJECT_DIR$/topic/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wall/models.py" afterPath="$PROJECT_DIR$/wall/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wall/urls.py" afterPath="$PROJECT_DIR$/wall/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/wall/views.py" afterPath="$PROJECT_DIR$/wall/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,6 +87,9 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
@@ -110,7 +127,7 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pin_scrapy/pin_scrapy/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="90">
               <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -119,11 +136,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wall/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="345">
+              <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -132,8 +159,8 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/me/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="45">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -155,7 +182,7 @@
         <entry file="file://$PROJECT_DIR$/me/tests.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -188,6 +215,7 @@
       <find>labels</find>
       <find>image-pin-template</find>
       <find>ITEM_PIPELINES</find>
+      <find>pyc</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -228,6 +256,7 @@
         <option value="$PROJECT_DIR$/pin_scrapy/__init__.py" />
         <option value="$PROJECT_DIR$/pin_scrapy/pin_scrapy/__init__.py" />
         <option value="$PROJECT_DIR$/wall/models.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -258,6 +287,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -294,110 +324,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="wall" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="foundation" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pin_scrapy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="topic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pin_scrapy" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pin_scrapy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,6 +338,7 @@
     <property name="js.eslint.eslintPackage" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -718,13 +652,21 @@
       <option name="presentableId" value="Default" />
       <updated>1486783809553</updated>
     </task>
+    <task id="LOCAL-00001" summary="-- add spiders">
+      <created>1486921616764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1486921616764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="152" y="71" width="1400" height="913" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26141384" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26435935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -750,6 +692,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="-- add spiders" />
+    <option name="LAST_COMMIT_MESSAGE" value="-- add spiders" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -757,13 +703,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/third-party/label_better/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/third-party/sticky/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-497">
@@ -775,9 +714,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1635">
           <caret line="3" column="21" lean-forward="true" selection-start-line="3" selection-start-column="21" selection-end-line="3" selection-end-column="21" />
-          <folding>
-            <marker date="1389561998000" expanded="true" signature="4269:4304" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -888,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="25" column="49" lean-forward="false" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="49" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -903,16 +837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="23" column="32" lean-forward="false" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="42" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#i#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,10 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="54" column="50" lean-forward="false" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#4;n#div#0;n#form#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#button#0;n#div#5;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -953,7 +873,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="46" lean-forward="false" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -961,7 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -977,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-176">
           <caret line="69" column="45" lean-forward="false" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,9 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="37" lean-forward="true" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#15#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1010,9 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1020,9 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="103">
           <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
-          <folding>
-            <element signature="e#25#38#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1030,7 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="72" column="11" lean-forward="false" selection-start-line="72" selection-start-column="11" selection-end-line="72" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,7 +944,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1046,7 +951,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1054,9 +958,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
           <caret line="49" column="30" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#24#35#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1078,7 +979,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pin_scrapy/pin_scrapy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
+        <state relative-caret-position="90">
           <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
@@ -1103,8 +1004,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/me/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state relative-caret-position="45">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -1122,7 +1023,7 @@
     <entry file="file://$PROJECT_DIR$/me/tests.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
-          <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1139,14 +1040,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="29" column="7" lean-forward="false" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wall/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="345">
+          <caret line="25" column="56" lean-forward="true" selection-start-line="25" selection-start-column="56" selection-end-line="25" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
         </state>
       </provider>
