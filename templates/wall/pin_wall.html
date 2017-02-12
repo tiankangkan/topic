@@ -1,9 +1,32 @@
 {% load staticfiles %}
+<title>Topic-便贴墙</title>
 
 {% include "foundation/layout.html" %}
+<script src="{% static "wall/js/global-define.js" %}"></script>
+
 
 <link rel="stylesheet" type="text/css" href="{% static "wall/css/pin_wall.css" %}"/>
 
+<div id="float-bar" class="row float-bar" style="margin-top: 20px; ">
+    <div class="row col s6 push-s3 no-padding" style="background-color: white; display: inline-block;">
+        <div class="no-padding col s1 right-align">
+            <i class="material-icons prefix icon" style="margin-right: 10px">search</i>
+        </div>
+        <div class="no-padding col s10">
+            <input id="search-pin" type="text" style="" class="label_better no-padding">
+        </div>
+        <div class="no-padding col s1 left-align">
+            <a href="{% url 'addPin' %}" target="_blank" class="btn-floating btn waves-effect waves-light light-blue"
+               style="margin-top: 3px; margin-left: 10px"><i class="material-icons">add</i></a>
+        </div>
+    </div>
+    <div class="row col s1 push-s5">
+        <div class="no-padding right-align">
+            <a href="{% url 'me' %}" target="_blank" class="btn-floating btn waves-effect waves-light light-blue"
+               style="margin-top: 3px;"><i class="material-icons">perm_identity</i></a>
+        </div>
+    </div>
+</div>
 
 <div id="grid-div" class="grid">
     <!-- width of .grid-sizer used for columnWidth -->
@@ -15,20 +38,40 @@
         <div class="card-image">
             <a target="_blank"><img src="/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png"></a>
             <a target="_blank"><span class="card-title">Card Title</span></a>
-            <a class="btn-floating halfway-fab waves-effect waves-light blue"><i
-                    class="material-icons">grade</i></a>
+            <a class="btn-floating halfway-fab waves-effect waves-light pink"><i
+                    class="material-icons">favorite_border</i></a>
         </div>
         <div class="card-content">
             <p>I am a very simple card. I am good at containing small bits of information. I am convenient
-                because I
-                require little markup to use effectively.</p>
+                because I require little markup to use effectively.</p>
         </div>
+    </div>
+
+    <ul class="tags">
+        <li><a class="tag">HTML</a></li>
+        <li><a class="tag">CSS</a></li>
+        <li><a class="tag">JavaScript</a></li>
+    </ul>
+</div>
+
+<div id="article-pin-template" class="grid-item" style="padding: 3px; display: none">
+    <div class="card">
+        <div class="card-image">
+            <a target="_blank"><img src="/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png"></a>
+            <a target="_blank"><span class="card-title">Card Title</span></a>
+            <a class="btn-floating halfway-fab waves-effect waves-light pink"><i
+                    class="material-icons">favorite_border</i></a>
+        </div>
+        <div class="card-content" style="padding: 24px 10px 5px 10px">
+            <p>I am a very simple card. I am good at containing small bits of information. I am convenient
+                because I require little markup to use effectively.</p>
+        </div>
+        <ul class="tags"><li><a href="#" class="tag">HTML</a></li></ul>
     </div>
 </div>
 
 <script>
-    var url_filter_pin = '../filterPin/';
-    var PIN_TYPE_IMAGE = 'PIN_TYPE_IMAGE';
+    var url_filter_pin = "{% url 'filterPin' %}";
 
     function gen_image_pin(title, summary, link, image_url, width) {
         var $card = $('#image-pin-template').clone();
@@ -48,14 +91,52 @@
         $('#grid-div').append($card);
     }
 
+    function gen_labels(label_list) {
+        if (!label_list || !Object.prototype.toString.call(label_list) === '[object Array]') {
+            return
+        }
+        var $labels = $('<ul class="tags" style="margin-top: 5px"></ul>');
+        label_list.forEach(function (x) {
+            $labels.append('<li><a href="#" class="tag">' + x +'</a></li>');
+        });
+        return $labels;
+    }
+
+    function gen_article_pin(title, summary, link, image_url, labels, width) {
+        var $card = $('#article-pin-template').clone();
+
+        if (width == undefined || !(width >= 1 && width <= 10)) {    // 不合法的 width
+            width = 1;
+        }
+
+        $card.attr('id', null).attr('display', 'inline-block');
+        $card.find('.card-title').text(title);
+        $card.find('.card-content p').text(summary);
+        $card.find('.card-image a').attr('href', link);
+        $card.find('.card-image a img').attr('src', image_url);
+        $card.addClass('grid-item--width' + width);
+        $card.find('.tags').remove();
+        $card.find('.card-content').append(gen_labels(labels));
+        $card.show();
+
+        $('#grid-div').append($card);
+    }
+
     function load_pins(pin_list) {
         var $grid = $('#grid-div');
         $grid.empty();
         $grid.append('<div class="grid-sizer"></div>');
-        for (var i = 0; i < pin_list.length; i ++) {
+        for (var i = 0; i < pin_list.length; i++) {
             var item = pin_list[i];
+            if (typeof item['labels'] === 'string') {
+                item['labels'] = item['labels'].split("##");
+            }
             if (item.pin_type == PIN_TYPE_IMAGE) {
-                gen_image_pin(item.title, item.summary, item.link, item.image_url, item.width);
+                gen_image_pin(item['title'], item['summary'], item['link'], item['image_url'], item['width']);
+            } else if (item.pin_type == PIN_TYPE_ARTICLE) {
+                gen_article_pin(item['title'], item['summary'], item['link'], item['image_url'], item['labels'], item['width']);
+            } else {
+                Materialize.toast('接收到了不支持的便贴类型: ' + item.pin_type, 5000);
             }
         }
 
@@ -67,7 +148,7 @@
             percentPosition: true
         });
     }
-    
+
     function filter_pins() {
         show_loading('div_loading');
         var values = {};
@@ -82,17 +163,22 @@
                 if (resp.status == 'ok') {
                     load_pins(resp.data);
                 } else {
-                    Materialize.toast(resp['data'], 10000);
+                    Materialize.toast('主页都加载失败了, 孔子说: 90% 的错误都是发新版本引起的～</br></br>' + resp['data'], 10000);
                 }
             }
         });
     }
 
+    function init_plugins() {
+        $("#float-bar").sticky({topSpacing: 0, zIndex: 9999});
+    }
+
     $(function () {
-{#        for (var i = 0; i < 100;  i ++) {#}
-{#            gen_image_card('Pin', '这是一个新的 Pin', 'https://www.baidu.com/', '/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png', i % 4);#}
-{#        }#}
+        {#        for (var i = 0; i < 100;  i ++) {#}
+        {#            gen_image_card('Pin', '这是一个新的 Pin', 'https://www.baidu.com/', '/static/public-img/wall/174CEB88-44B1-4438-9604-7F06A7227476.png', i % 4);#}
+        {#        }#}
         filter_pins();
+        init_plugins();
     });
 
 </script>

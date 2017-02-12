@@ -1,0 +1,148 @@
+{% load staticfiles %}
+<title>Topic-添加便贴</title>
+
+{% include "foundation/layout.html" %}
+
+<script src="{% static "wall/js/global-define.js" %}"></script>
+
+<style>
+    .cute-font {
+        font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;
+    }
+
+    .pin-edit-div {
+        margin-top: 20px;
+    }
+</style>
+
+<div class="container row">
+    <div class="row">
+        <h3 class="cute-font">添加便贴</h3>
+    </div>
+
+    <ul id="tabs-swipe" class="tabs">
+        <li class="tab col s3"><a class="active" href="#pin-article">文章</a></li>
+        <li class="tab col s3"><a href="#pin-image">照片</a></li>
+        <li class="tab col s3"><a href="#pin-audio">音乐</a></li>
+        <li class="tab col s3"><a href="#pin-video">视频</a></li>
+    </ul>
+
+    <div id="pin-article" class="col s12 row pin-edit-div" data-pin-type="PIN_TYPE_ARTICLE">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">link</i>
+                    <input id="link" type="text" class="validate">
+                    <label for="link">添加文章链接</label>
+                    {#                    #TODO 自动生成文章信息#}
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">title</i>
+                    <input id="title" type="text">
+                    <label for="title">起一个响亮的标题 ～</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mode_edit</i>
+                    <textarea id="summary" class="materialize-textarea"></textarea>
+                    <label for="summary">简介</label>
+                </div>
+                <div class="input-field col s9">
+                    <i class="material-icons prefix">image</i>
+                    <input id="image_url" type="text">
+                    <label for="image_url">封面图片链接</label>
+                </div>
+                <div class="file-field input-field col s3">
+                    <div class="btn pink lighten-3">
+                        <span>点击上传</span>
+                        <input type="file">
+                    </div>
+                    <div class="file-path-wrapper" style="width: 0">
+                        <input class="file-path" type="text">
+                    </div>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">face</i>
+                    <input id="author" type="text">
+                    <label for="author">作者</label>
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">loyalty</i>
+                    <div id="labels" class="chips chips-placeholder"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div id="pin-image" class="col s12 pin-edit-div">添加照片</div>
+    <div id="pin-audio" class="col s12 pin-edit-div">添加音乐</div>
+    <div id="pin-video" class="col s12 pin-edit-div">添加视频</div>
+
+    <div class="col s6 push-s3">
+        <button class="btn waves-effect waves-light pink" onclick="handle_submit()" style="width: 100%">
+            好了<i class="material-icons right">send</i>
+        </button>
+    </div>
+</div>
+
+<script>
+    var url_submit_pin = "{% url 'submitPin' %}";
+
+    function init_plugins() {
+        $('#labels').material_chip({
+            placeholder: '+标签',
+            secondaryPlaceholder: '添加标签 :)',
+            autocompleteData: {
+                'AI': null,
+                '极客': null,
+                '实用': null,
+                '高大上': null
+            }
+        });
+    }
+
+    function get_value_of_chips(id) {
+        var labels = $('#' + id).material_chip('data').map(function (x) {
+            return x.tag;
+        });
+        return labels.join("##");    // use '##' split labels.
+    }
+
+    function handle_submit() {
+        var values = {};
+        ['pin-article', 'pin-image', 'pin-audio', 'pin-video'].forEach(function (id) {
+            if ($('#' + id).hasClass('active')) {
+                console.log('active id is: ', id);
+                if (id == 'pin-article') {
+                    values['link'] = $('#link').val();
+                    values['title'] = $('#title').val();
+                    values['pin_type'] = PIN_TYPE_ARTICLE;
+                    values['image_url'] = $('#image_url').val();
+                    values['summary'] = $('#summary').val();
+                    values['labels'] = get_value_of_chips('labels');
+                }
+            }
+        });
+
+        console.log('add pin: ', values);
+
+        $.ajax({
+            url: url_submit_pin,
+            type: "POST",
+            dataType: 'json',
+            data: {'values': JSON.stringify(values)},
+            success: function (resp) {
+                console.log('submit resp', resp);
+                hide_loading('div_loading');
+                if (resp.status == 'ok') {
+                    Materialize.toast('添加便签成功 :)', 4000);
+                } else {
+                    Materialize.toast('Oh my god, 添加便签失败了 来包辣条压压惊。。。</br></br>' + resp['data'], 10000);
+                }
+            }
+        });
+    }
+
+    $(function () {
+        init_plugins();
+    });
+</script>

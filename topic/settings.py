@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'wall',
+    'me',
+    'db_adapter'
 ]
 
 MIDDLEWARE = [

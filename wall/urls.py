@@ -20,7 +20,8 @@ from . import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^pinWall/', views.reply_to_pin_wall, name="pinWall"),
+    url(r'^pinWall$', views.reply_to_pin_wall, name="pinWall"),
     url(r'^filterPin/', views.reply_to_filter_pin, name="filterPin"),
-
+    url(r'^addPin/', views.reply_to_add_pin, name="addPin"),
+    url(r'^submitPin/', views.reply_to_submit_pin, name="submitPin"),
 ]

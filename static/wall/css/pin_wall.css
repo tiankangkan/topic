@@ -43,3 +43,16 @@
 .grid-item--width10 {
     width: 100%;
 }
+
+
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+.float-bar {
+    z-index: -1;
+}
+
+.float-bar .icon {
+    margin-top: 10px;
+}

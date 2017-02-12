@@ -1,0 +1,8 @@
+/**
+ * Created by masterkang on 2017/2/12.
+ */
+
+var PIN_TYPE_IMAGE = 'PIN_TYPE_IMAGE';
+var PIN_TYPE_ARTICLE = 'PIN_TYPE_ARTICLE';
+var PIN_TYPE_AUDIO = 'PIN_TYPE_AUDIO';
+var PIN_TYPE_VIDEO = 'PIN_TYPE_VIDEO';
